@@ -14,7 +14,7 @@ Opens a modal to configure the screening:
   - **Spammer flags** — Discord's `Spammer`/`Quarantined` user flags or `unusual_dm_activity_until`.
   - **Default avatars** — no avatar, or one of Discord's default/mobile avatar hashes.
   - **No global name** — user has only a username and no display name.
-- Verification time is fixed at **3 hours**.
+- Verification time is fixed at **15 minutes**.
 
 ## How quarantine works
 

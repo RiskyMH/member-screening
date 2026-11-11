@@ -804,7 +804,7 @@ client.on(GatewayDispatchEvents.InteractionCreate, async ({ data: interaction, a
         `-# **Quarantine role:** <@&${roleId}>`,
         `-# **Log channel:** ${logChannelId ? `<#${logChannelId}>` : "*(not set)*"}`,
         `-# **Checks:** ${enabledCheckLabels(checks).join(", ") || "none"}`,
-        `-# **Time to verify:** 3 hours`,
+        `-# **Time to verify:** 15 minutes`,
       ].join("\n"));
 
       const postSetupFails = [];

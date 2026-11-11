@@ -21,8 +21,8 @@ export const CHECK_LABELS: Record<JoinGuardCheck, string> = {
   [JoinGuardCheck.NoGlobalName]: "No global name",
 };
 
-/** Verification window is fixed at 3 hours. */
-export const VERIFY_WINDOW_SECONDS = 3 * 60 * 60;
+/** Verification window is fixed at 15 minutes. */
+export const VERIFY_WINDOW_SECONDS = 15 * 60;
 
 export enum QuarantineStatus {
   Pending = "pending",
