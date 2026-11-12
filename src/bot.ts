@@ -644,7 +644,6 @@ client.on(GatewayDispatchEvents.GuildMemberAdd, async ({ data: member, api }) =>
 // They left (or were kicked) while quarantined -> stop polling them
 client.on(GatewayDispatchEvents.GuildMemberRemove, async ({ data: member }) => {
   if (member.user.bot) return;
-  await Bun.sleep(1000); // wait a second for the db to really be updated
 
   const row = await db.getQuarantine(member.guild_id, member.user.id);
   if (!row || !row.role_id) return;
@@ -666,8 +665,6 @@ client.on(GatewayDispatchEvents.GuildMemberRemove, async ({ data: member }) => {
 // They lost the role manually while quarantined -> stop polling them
 client.on(GatewayDispatchEvents.GuildMemberUpdate, async ({ data: member, api }) => {
   if (member.user.bot) return;
-
-  await Bun.sleep(1000); // wait a second for the db to really be updated
 
   const row = await db.getQuarantine(member.guild_id, member.user.id);
   if (!row || !row.role_id) return;
